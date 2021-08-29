@@ -1,8 +1,8 @@
 using System;
 
-namespace CodeZ.Tools
+namespace CodeZ.Core.Tools
 {
-    public class Singleton<T> where T : class, new()
+    public abstract class Singleton<T> where T : class, new()
     {
         static T _instance;
         public static T Instance
