@@ -57,9 +57,10 @@
   <ItemGroup>
     <Compile Include="Assets\_Script\Core\ISerializable.cs" />
     <Compile Include="Assets\_Script\System\Program.cs" />
-    <Compile Include="Assets\_Script\MapEditor\MapRectBase.cs" />
+    <Compile Include="Assets\_Script\Map\MapEditor\MapRectBase.cs" />
     <Compile Include="Assets\_Script\Core\Cmd\MoveCmd.cs" />
     <Compile Include="Assets\_Script\Core\Actor\ActorManager.cs" />
+    <Compile Include="Assets\_Script\Map\Tile\RoadTile.cs" />
     <Compile Include="Assets\_Script\Core\Actor\ActorDataBase.cs" />
     <Compile Include="Assets\_Script\Core\Tools\FSM\FSM.cs" />
     <Compile Include="Assets\_Script\Core\Actor\InfoBase.cs" />
@@ -67,14 +68,15 @@
     <Compile Include="Assets\_Script\Core\LogicGame.cs" />
     <Compile Include="Assets\_Script\Core\Actor\ActorBase.cs" />
     <Compile Include="Assets\_Script\Core\Actor\Player\PlayerData.cs" />
-    <Compile Include="Assets\_Script\MapEditor\MapEditor.cs" />
+    <Compile Include="Assets\_Script\Map\MapEditor\MapEditorRuntime.cs" />
+    <Compile Include="Assets\_Script\Map\MapEditor\MapEditor.cs" />
     <Compile Include="Assets\_Script\System\GameSystemBase.cs" />
     <Compile Include="Assets\_Script\Core\Tools\Singleton.cs" />
     <Compile Include="Assets\_Script\Core\Actor\Player\APlayer.cs" />
     <Compile Include="Assets\_Script\Core\Output\OutputManager.cs" />
     <Compile Include="Assets\_Script\Core\Actor\Player\PlayerInfo.cs" />
     <Compile Include="Assets\_Script\System\EStateType.cs" />
-    <Compile Include="Assets\_Script\MapEditor\MapEditorRuntime.cs" />
+    <Compile Include="Assets\_Script\Map\Tile\BasicMapTile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -628,6 +630,12 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
