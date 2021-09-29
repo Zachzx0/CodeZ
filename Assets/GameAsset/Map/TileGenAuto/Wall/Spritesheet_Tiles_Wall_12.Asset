@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c4390efd39af3347a141da65cb09a38, type: 3}
-  m_Name: New CodeZ Tile
+  m_Name: Spritesheet_Tiles_Wall_12
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 5156565094073712461, guid: 2a0db8cf296654d7ebb63e7b966933f0, type: 3}
+  m_Sprite: {fileID: 850933477734319103, guid: 708ab55bda71e45e5977fd5bee37c6f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -34,4 +34,4 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
   m_ColliderType: 1
-  MapType: 0
+  MapType: 00000000

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using System;
 #if UNITY_EDITOR
 using UnityEditor;
 
@@ -11,6 +12,38 @@ public class BasicMapTileEditor:Editor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
+
+        BasicMapTile tile = target as BasicMapTile;
+
+        if (tile.MapType == null)
+        {
+            tile.MapType = new List<EMapRectType>() { EMapRectType.Base };
+        }
+
+        GUILayout.Space(20);
+        GUILayout.Label("格子类型");
+        GUILayout.Space(10);
+
+        string[] names = Enum.GetNames(typeof(EMapRectType));
+
+        for (int i = 0; i < names.Length; i++)
+        {
+            var name = names[i];
+            GUILayout.BeginHorizontal();
+            GUILayout.Label(name);
+            EMapRectType type = (EMapRectType)i;
+            bool existType = tile.MapType.Contains(type);
+            bool notSelect =  EditorGUILayout.Toggle(existType);
+            if (!notSelect && existType)
+            {
+                tile.MapType.Remove(type);
+            }
+            else if (notSelect && !existType)
+            {
+                tile.MapType.Add(type);
+            }
+            GUILayout.EndHorizontal();
+        }
     }
 
     // 下面是添加菜单项以创建 RoadTile 资源的 helper 函数
@@ -75,5 +108,5 @@ public class BasicMapTile : Tile
     public const string BasePathParent = "Map/";
 
     [Header("格子类型")]
-    public EMapRectType[] MapType;
+    public List<EMapRectType> MapType;
 }
